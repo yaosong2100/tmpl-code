@@ -1,0 +1,97 @@
+/*
+ * @Author: yaosong.shen
+ * @Date: 2019-10-09 16:55:15
+ * @Last Modified by:   yaosong.shen
+ * @Last Modified time: 2019-10-09 16:55:15
+ */
+
+/*******************************************
+  变量定义 统一定义到page元素下面
+  注意事项：
+  1.变量名前面必须俩个中横线,且不允许有数字
+  2.变量名命名规则：见名知义
+  3.变量使用:var(变量名),如var(--dpr)
+*/
+
+page {
+  --dpr: 1;
+}
+
+/* dpr1.5 */
+@media (-webkit-min-device-pixel-ratio: 1.2), (min-device-pixel-ratio: 1.2) {
+  page {
+    --dpr: 1.5;
+  }
+}
+
+/* dpr2 */
+@media (-webkit-min-device-pixel-ratio: 1.7), (min-device-pixel-ratio: 1.7) {
+  page {
+    --dpr: 2;
+  }
+}
+
+/* dpr2.5 */
+@media (-webkit-min-device-pixel-ratio: 2.2), (min-device-pixel-ratio: 2.2) {
+  page {
+    --dpr: 2.5;
+  }
+}
+
+/* dpr3 */
+@media (-webkit-min-device-pixel-ratio: 2.7), (min-device-pixel-ratio: 2.7) {
+  page {
+    --dpr: 3;
+  }
+}
+
+/* dpr4 */
+@media (-webkit-min-device-pixel-ratio: 3.2), (min-device-pixel-ratio: 3.2) {
+  page {
+    --dpr: 4;
+  }
+}
+
+/*******************************************
+
+  1px细边框 【注意：这个元素会添加样式 position: relative】
+
+  使用方法：
+  1.在需要细边框的元素加上onepx类
+  2.为这个元素::after伪类编写边框
+
+  code demo
+
+  wxml:
+  <view class="items onepx">圆角</view>
+
+  wxss:
+    .items::after{
+      border-bottom: 1px solid #ff0000;
+      border-radius: calc(5rpx * var(--dpr));
+    }
+
+*/
+.onepx {
+  position: relative;
+}
+.onepx::after {
+  content: '';
+  display: block;
+  width: 200%;
+  height: 200%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  z-index: 999;
+}
+//根据dpr先放大 然后缩小
+.onepx::after {
+  width: calc(var(--dpr) * 100%);
+  height: calc(var(--dpr) * 100%);
+  transform: scale(calc(1 / var(--dpr)));
+}

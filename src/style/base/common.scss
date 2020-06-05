@@ -1,0 +1,133 @@
+/**
+common css
+*/
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: space-between;
+  box-sizing: border-box;
+  color: $color;
+}
+
+.com-input__wrapper {
+  position: relative;
+}
+.com-input {
+  position: relative;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  height: 80rpx;
+  color: $black19;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  border: 1rpx solid $gray-border;
+  border-radius: 100rpx;
+
+  &--arrow .icon-down,
+  &--upload .icon-upload {
+    position: absolute;
+    top: 24rpx;
+    right: 44rpx;
+    font-size: 32rpx;
+  }
+
+  &__placeholder {
+    color: $gray-text;
+    font-size: 28rpx;
+    line-height: 40rpx;
+  }
+
+  &--nickname {
+    padding-left: 120rpx;
+
+    &:before {
+      position: absolute;
+      top: 20rpx;
+      left: 40rpx;
+      display: block;
+      content: '昵称：';
+      font-size: 28rpx;
+    }
+  }
+}
+
+.com-input-flat {
+  position: relative;
+  padding: 20rpx 0;
+  height: 80rpx;
+  min-height: 80rpx;
+  font-size: 28rpx;
+  text-align: left;
+  font-weight: lighter;
+  line-height: 40rpx;
+  border-bottom: 1rpx solid $gray-border-cc;
+}
+
+.com-button {
+  display: inline-block;
+  padding: 0 80rpx;
+  height: 80rpx;
+  color: white;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  outline: 0;
+  border-radius: 4rpx;
+  border: 2rpx solid $gold;
+  box-sizing: border-box;
+  background-color: $gold;
+
+  &::after {
+    content: '';
+    display: none;
+  }
+
+  &.lg {
+    height: 100rpx;
+    font-size: 36rpx;
+    line-height: 100rpx;
+    font-weight: medium;
+  }
+  &.disabled {
+    border-color: #dccfb1;
+    background-color: #dccfb1;
+  }
+  &.plain {
+    color: $gold;
+    background-color: transparent;
+  }
+  &.default {
+    color: $black1b;
+    border-color: $gray-border;
+    background-color: transparent;
+  }
+}
+
+.com-action {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 128rpx;
+  background-color: $white;
+  border-top: 1rpx solid $gray-border;
+
+  &__btn {
+    display: inline-block;
+    margin: 20rpx 30rpx;
+    padding: 0;
+    width: 220rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    box-sizing: border-box;
+    border-radius: 0;
+
+    &--main {
+      margin-left: 0;
+      width: 440rpx;
+    }
+  }
+}

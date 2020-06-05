@@ -1,0 +1,52 @@
+/*
+ * @Author: yaosong.shen
+ * @Date: 2019-10-09 16:53:40
+ * @Last Modified by: lang
+ * @Last Modified time: 2020-01-14 18:23:46
+ */
+
+/* 公共variable */
+
+/***颜色 以c开头***/
+$color: #8e9db0; //默认颜色
+
+$c-theme-green: #28beca;
+$c-black-content: #2c2c2c;
+$c-gray-content: #4c4c4c;
+$c-gray-content-light: #666666;
+$c-gray-tips: #999999;
+$c-com-bg-green: #beebef;
+$c-fff: #fff;
+$c-28: $c-theme-green;
+$c-5f: #5fd1db;
+$c-007: #0072ff;
+$c-f78: #f7f8f8;
+$c-888: #888;
+$c-eee: #eeeeee;
+$c-2c2: #2c2c2c;
+$c-c8c: #c8c8c8;
+$c-999: #999;
+$c-e5e: #e5e5e5;
+$c-666: $c-gray-content-light;
+$c-44c: #44c8d3;
+$c-e1e: #e1e6ec;
+$c-000: #000;
+$c-626: #626d7e;
+$c-353: #353b41;
+
+/**字体 以f开头***/
+$fontSize: 32px;
+
+$f-18: 18px;
+$f-20: 20px;
+$f-22: 22px;
+$f-24: 24px;
+$f-26: 26px;
+$f-28: 28px;
+$f-36: 36px;
+
+$viot-duration: 200ms; //transition动画 时间变量
+
+//cdn
+
+$cdn: 'https://cdn.cnbj2.fds.api.mi-img.com/viomi-official/viot/';

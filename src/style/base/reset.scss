@@ -1,0 +1,28 @@
+/**
+reset css
+*/
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: $color;
+  font-size: $fontSize;
+}
+
+page,
+view,
+text,
+navigator,
+form,
+label,
+input,
+image,
+video,
+audio,
+canvas {
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
