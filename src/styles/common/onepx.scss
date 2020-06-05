@@ -1,10 +1,3 @@
-/*
- * @Author: yaosong.shen
- * @Date: 2019-10-09 16:55:15
- * @Last Modified by:   yaosong.shen
- * @Last Modified time: 2019-10-09 16:55:15
- */
-
 /*******************************************
   变量定义 统一定义到page元素下面
   注意事项：
@@ -76,7 +69,7 @@ page {
   position: relative;
 }
 .onepx::after {
-  content: '';
+  content: "";
   display: block;
   width: 200%;
   height: 200%;
