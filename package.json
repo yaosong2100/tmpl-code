@@ -1,6 +1,6 @@
 {
   "name": "tmpl-code",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/yaosong2100/tmpl-code/issues"
   },
-  "homepage": "https://github.com/yaosong2100/tmpl-code#readme"
+  "homepage": "https://github.com/yaosong2100/tmpl-code#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
 }
